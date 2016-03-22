@@ -1,0 +1,20 @@
+<%= form_for @search do |f| %>
+	<br>
+	<%= f.label :keyword %>
+	<br>
+	<%= f.text_field :keyword %>
+	<br>
+	<%= f.label :category %>
+	<br>
+	<%= f.select :category, options_for_select(@categories), include_blank: true %>
+	<br>
+	<%= f.label :minprice %>
+	<br>
+	<%= f.text_field :minprice %>
+	<br>
+	<%= f.label :maxprice %>
+	<br>
+	<%= f.text_field :maxprice %>
+	<br>
+	<%= f.submit %>
+<% end %>

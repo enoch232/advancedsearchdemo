@@ -1,0 +1,12 @@
+<h1>Search Results</h1>
+<%= link_to "back", new_search_path %>
+<br>
+<% if @search.search_posts.empty? %>
+	<div>No records found. </div>
+<% else %>
+	<% @search.search_posts.each do |p| %>
+		<%= p.title %>
+		<br>
+	<% end %>
+
+<% end %>
